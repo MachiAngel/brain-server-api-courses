@@ -6,10 +6,13 @@ const handleRegister = (req, res, db, bcrypt) => {
 
   const { email, name, password } = req.body
 
+  console.log('register:')
+  console.log(req.body)
+
   if (!email, !name, !password) {
     return res.status(400).json({errMsg:'incorrect form submisstion'})
   }
-
+  
   console.time('hash')
   const hash = bcrypt.hashSync(password, 10)
   console.timeEnd('hash')
