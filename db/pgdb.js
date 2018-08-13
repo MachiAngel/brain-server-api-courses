@@ -11,6 +11,8 @@ let connection = {
   ssl: !isDev ? true : false
 }
 
+console.log('connection:')
+console.log(connection)
 
 const db = knex({
   connection,

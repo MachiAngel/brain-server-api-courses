@@ -16,6 +16,9 @@ const port = process.env.PORT || 3001
 const { db } = require('./db/pgdb.js')
 
 
+console.log('db:')
+console.log(db)
+
 var bcrypt = require('bcrypt');
 
 app.use(cors())
